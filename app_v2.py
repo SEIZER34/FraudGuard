@@ -1091,6 +1091,1215 @@ label {
     }
 }
 
+/* =========================================================
+   FRAUDGUARD MOTION 2.0
+   PREMIUM SOC DASHBOARD MOTION SYSTEM
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE ENTRANCE
+   ========================================================= */
+
+.main .block-container {
+    animation:
+        fgPageIn
+        0.55s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
+}
+
+
+@keyframes fgPageIn {
+
+    0% {
+        opacity: 0;
+        transform:
+            translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   HERO MOTION
+   ========================================================= */
+
+.hero-title {
+    animation:
+        fgHeroIn
+        0.60s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
+}
+
+
+.hero-subtitle {
+    animation:
+        fgHeroIn
+        0.75s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
+}
+
+
+@keyframes fgHeroIn {
+
+    0% {
+        opacity: 0;
+        transform:
+            translateY(12px);
+    }
+
+    100% {
+        opacity: 1;
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   HERO GLOW
+   ========================================================= */
+
+.hero,
+.hero-title {
+    position:
+        relative;
+}
+
+
+.hero::before {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        -20px;
+
+    pointer-events:
+        none;
+
+    border-radius:
+        24px;
+
+    background:
+        radial-gradient(
+            circle at 20% 50%,
+            rgba(57,231,255,0.10),
+            transparent 35%
+        );
+
+    opacity:
+        0;
+
+    animation:
+        fgHeroGlow
+        6s
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes fgHeroGlow {
+
+    0%,
+    100% {
+        opacity:
+            0.25;
+    }
+
+    50% {
+        opacity:
+            0.75;
+    }
+
+}
+
+
+/* =========================================================
+   HERO SCAN BEAM
+   ========================================================= */
+
+.hero::after {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    bottom:
+        0;
+
+    left:
+        -60%;
+
+    width:
+        35%;
+
+    pointer-events:
+        none;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(57,231,255,0.08),
+            rgba(57,231,255,0.18),
+            rgba(57,231,255,0.08),
+            transparent
+        );
+
+    transform:
+        skewX(-18deg);
+
+    animation:
+        fgHeroScan
+        7s
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes fgHeroScan {
+
+    0% {
+        left:
+            -60%;
+        opacity:
+            0;
+    }
+
+    15% {
+        opacity:
+            1;
+    }
+
+    70% {
+        opacity:
+            0.8;
+    }
+
+    100% {
+        left:
+            120%;
+        opacity:
+            0;
+    }
+
+}
+
+
+/* =========================================================
+   PREMIUM LOGO MOTION
+   ========================================================= */
+
+.sidebar-logo {
+    animation:
+        premiumLogoGlow
+        4.5s
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes premiumLogoGlow {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 20px rgba(57,231,255,0.07),
+            inset 0 1px rgba(255,255,255,0.10);
+
+        border-color:
+            rgba(57,231,255,0.20);
+    }
+
+    50% {
+        box-shadow:
+            0 0 27px rgba(57,231,255,0.13),
+            0 0 42px rgba(138,92,255,0.05),
+            inset 0 1px rgba(255,255,255,0.12);
+
+        border-color:
+            rgba(57,231,255,0.27);
+    }
+
+}
+
+
+/* =========================================================
+   SIDEBAR BRAND
+   ========================================================= */
+
+.sidebar-brand {
+    animation:
+        fadeSlide
+        0.55s
+        ease
+        both;
+}
+
+
+.sidebar-title {
+    animation:
+        fgTextReveal
+        0.65s
+        ease
+        both;
+}
+
+
+.sidebar-subtitle {
+    animation:
+        fgTextReveal
+        0.85s
+        ease
+        both;
+}
+
+
+@keyframes fgTextReveal {
+
+    0% {
+        opacity:
+            0;
+        transform:
+            translateX(-6px);
+    }
+
+    100% {
+        opacity:
+            1;
+        transform:
+            translateX(0);
+    }
+
+}
+
+
+/* =========================================================
+   STATUS INDICATORS
+   ========================================================= */
+
+.status-dot {
+    animation:
+        statusPulse
+        2.2s
+        ease-in-out
+        infinite;
+}
+
+
+/* Generic live indicator */
+
+.live-indicator,
+.live-dot,
+.system-status-dot {
+    animation:
+        statusPulse
+        2s
+        ease-in-out
+        infinite;
+}
+
+
+/* =========================================================
+   KPI / METRIC CARDS
+   ========================================================= */
+
+.metric-card,
+.kpi-card,
+.custom-card,
+.prediction-card,
+.system-card,
+.info-card {
+    animation:
+        cardAppear
+        0.55s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.metric-card:hover,
+.kpi-card:hover,
+.custom-card:hover,
+.prediction-card:hover,
+.system-card:hover,
+.info-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(57,231,255,0.20);
+
+    box-shadow:
+        0 12px 32px rgba(0,0,0,0.30),
+        0 0 24px rgba(57,231,255,0.07);
+}
+
+
+/* =========================================================
+   KPI NUMBER EMPHASIS
+   ========================================================= */
+
+.metric-card [data-testid="stMetricValue"],
+.kpi-card [data-testid="stMetricValue"] {
+
+    transition:
+        transform 0.25s ease,
+        text-shadow 0.25s ease;
+}
+
+
+.metric-card:hover [data-testid="stMetricValue"],
+.kpi-card:hover [data-testid="stMetricValue"] {
+
+    transform:
+        scale(1.025);
+
+    text-shadow:
+        0 0 18px rgba(57,231,255,0.18);
+}
+
+
+/* =========================================================
+   BUTTON INTERACTION
+   ========================================================= */
+
+.stButton > button {
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    transition:
+        transform 0.20s ease,
+        box-shadow 0.20s ease,
+        border-color 0.20s ease;
+}
+
+
+.stButton > button:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 24px rgba(57,231,255,0.12);
+}
+
+
+.stButton > button::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        -120%;
+
+    width:
+        60%;
+
+    height:
+        100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.10),
+            transparent
+        );
+
+    transform:
+        skewX(-20deg);
+
+    transition:
+        left 0.55s ease;
+
+    pointer-events:
+        none;
+}
+
+
+.stButton > button:hover::after {
+
+    left:
+        140%;
+}
+
+
+/* =========================================================
+   SIDEBAR NAVIGATION
+   ========================================================= */
+
+[data-testid="stSidebar"] button {
+
+    transition:
+        transform 0.20s ease,
+        background 0.20s ease,
+        box-shadow 0.20s ease,
+        border-color 0.20s ease;
+}
+
+
+[data-testid="stSidebar"] button:hover {
+
+    transform:
+        translateX(3px);
+
+    box-shadow:
+        0 0 18px rgba(57,231,255,0.07);
+}
+
+
+/* =========================================================
+   SECTION HEADERS
+   ========================================================= */
+
+.section-title,
+.section-header,
+.nav-label {
+
+    animation:
+        fadeSlide
+        0.45s
+        ease
+        both;
+}
+
+
+/* =========================================================
+   RISK SCORE
+   ========================================================= */
+
+.risk-score,
+.risk-score-card,
+.risk-score-container {
+
+    animation:
+        fgRiskAppear
+        0.70s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
+}
+
+
+@keyframes fgRiskAppear {
+
+    0% {
+        opacity:
+            0;
+
+        transform:
+            scale(0.94);
+    }
+
+    100% {
+        opacity:
+            1;
+
+        transform:
+            scale(1);
+    }
+
+}
+
+
+/* Risk score pulse when high/critical */
+
+.risk-high,
+.risk-critical,
+.high-risk,
+.critical-risk {
+
+    animation:
+        criticalPulse
+        2.2s
+        ease-in-out
+        infinite;
+}
+
+
+/* =========================================================
+   RISK PROGRESS BAR
+   ========================================================= */
+
+.stProgress > div > div > div > div {
+
+    background-size:
+        200% 100% !important;
+
+    animation:
+        fgProgressFlow
+        3s
+        linear
+        infinite;
+}
+
+
+@keyframes fgProgressFlow {
+
+    0% {
+        background-position:
+            100% 0;
+    }
+
+    100% {
+        background-position:
+            -100% 0;
+    }
+
+}
+
+
+/* =========================================================
+   LIVE MONITOR
+   ========================================================= */
+
+.live-monitor,
+.live-feed,
+.monitor-panel {
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+}
+
+
+/* Scanning beam hook */
+
+.live-monitor::after,
+.live-feed::after,
+.monitor-panel::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    bottom:
+        0;
+
+    left:
+        -45%;
+
+    width:
+        20%;
+
+    pointer-events:
+        none;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(57,231,255,0.08),
+            rgba(57,231,255,0.22),
+            rgba(57,231,255,0.08),
+            transparent
+        );
+
+    transform:
+        skewX(-15deg);
+
+    animation:
+        fgMonitorScan
+        5s
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes fgMonitorScan {
+
+    0% {
+        left:
+            -45%;
+
+        opacity:
+            0;
+    }
+
+    15% {
+        opacity:
+            1;
+    }
+
+    75% {
+        opacity:
+            0.75;
+    }
+
+    100% {
+        left:
+            125%;
+
+        opacity:
+            0;
+    }
+
+}
+
+
+/* =========================================================
+   LIVE TRANSACTION ROWS
+   ========================================================= */
+
+.transaction-row,
+.live-row,
+.feed-row {
+
+    animation:
+        fgRowIn
+        0.45s
+        ease-out
+        both;
+
+    transition:
+        background 0.20s ease,
+        transform 0.20s ease;
+}
+
+
+.transaction-row:hover,
+.live-row:hover,
+.feed-row:hover {
+
+    transform:
+        translateX(3px);
+}
+
+
+/* =========================================================
+   ALERT / CRITICAL TRANSACTION
+   ========================================================= */
+
+.alert-pulse,
+.fraud-alert,
+.critical-alert {
+
+    animation:
+        fgAlertPulse
+        1.8s
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes fgAlertPulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 0
+            rgba(255,78,219,0);
+    }
+
+    50% {
+        box-shadow:
+            0 0 24px
+            rgba(255,78,219,0.16);
+    }
+
+}
+
+
+/* =========================================================
+   INVESTIGATION WORKSPACE
+   ========================================================= */
+
+.investigation-panel,
+.case-panel,
+.analyst-panel {
+
+    animation:
+        fgPanelIn
+        0.55s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
+}
+
+
+@keyframes fgPanelIn {
+
+    0% {
+        opacity:
+            0;
+
+        transform:
+            translateX(10px);
+    }
+
+    100% {
+        opacity:
+            1;
+
+        transform:
+            translateX(0);
+    }
+
+}
+
+
+/* =========================================================
+   BULK SCANNER PIPELINE
+   ========================================================= */
+
+.pipeline,
+.scanner-pipeline {
+
+    animation:
+        fadeSlide
+        0.55s
+        ease
+        both;
+}
+
+
+.pipeline-stage,
+.scanner-stage {
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.pipeline-stage:hover,
+.scanner-stage:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 8px 24px rgba(57,231,255,0.08);
+}
+
+
+/* Active scanning stage */
+
+.pipeline-stage.active,
+.scanner-stage.active,
+.stage-active {
+
+    animation:
+        fgStagePulse
+        1.8s
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes fgStagePulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 0
+            rgba(57,231,255,0);
+    }
+
+    50% {
+        box-shadow:
+            0 0 20px
+            rgba(57,231,255,0.14);
+    }
+
+}
+
+
+/* =========================================================
+   INTELLIGENCE WORKSPACE
+   ========================================================= */
+
+.intelligence-card,
+.analytics-card,
+.observation-card {
+
+    animation:
+        cardAppear
+        0.55s
+        ease
+        both;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.intelligence-card:hover,
+.analytics-card:hover,
+.observation-card:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.25),
+        0 0 18px rgba(138,92,255,0.08);
+}
+
+
+/* =========================================================
+   CHART CONTAINERS
+   ========================================================= */
+
+.chart-container,
+.analytics-chart {
+
+    animation:
+        fgChartIn
+        0.65s
+        ease-out
+        both;
+}
+
+
+@keyframes fgChartIn {
+
+    0% {
+        opacity:
+            0;
+
+        transform:
+            translateY(8px)
+            scale(0.99);
+    }
+
+    100% {
+        opacity:
+            1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   DATAFRAME
+   ========================================================= */
+
+[data-testid="stDataFrame"] {
+
+    transition:
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+[data-testid="stDataFrame"]:hover {
+
+    border-color:
+        rgba(57,231,255,0.16);
+
+    box-shadow:
+        0 8px 28px rgba(0,0,0,0.20);
+}
+
+
+/* =========================================================
+   EXPANDERS
+   ========================================================= */
+
+[data-testid="stExpander"] {
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+[data-testid="stExpander"]:hover {
+
+    transform:
+        translateY(-2px);
+
+    border-color:
+        rgba(138,92,255,0.20);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.18);
+}
+
+
+/* =========================================================
+   AMBIENT SOC GRID
+   ========================================================= */
+
+.stApp::before {
+
+    content:
+        "";
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    pointer-events:
+        none;
+
+    z-index:
+        0;
+
+    opacity:
+        0.035;
+
+    background-image:
+        linear-gradient(
+            rgba(57,231,255,0.35) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(57,231,255,0.35) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        42px 42px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent 85%
+        );
+}
+
+
+/* =========================================================
+   SUBTLE SHIMMER
+   ========================================================= */
+
+.shimmer,
+.loading-shimmer {
+
+    background:
+        linear-gradient(
+            110deg,
+            transparent 20%,
+            rgba(255,255,255,0.05) 45%,
+            transparent 70%
+        );
+
+    background-size:
+        250% 100%;
+
+    animation:
+        fgShimmer
+        3.5s
+        linear
+        infinite;
+}
+
+
+@keyframes fgShimmer {
+
+    0% {
+        background-position:
+            200% 0;
+    }
+
+    100% {
+        background-position:
+            -50% 0;
+    }
+
+}
+
+
+/* =========================================================
+   ROW ENTRANCE
+   ========================================================= */
+
+@keyframes fgRowIn {
+
+    0% {
+        opacity:
+            0;
+
+        transform:
+            translateY(5px);
+    }
+
+    100% {
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   STAGGERED CARD ENTRANCE
+   ========================================================= */
+
+.metric-card:nth-child(1),
+.kpi-card:nth-child(1) {
+    animation-delay:
+        0.05s;
+}
+
+
+.metric-card:nth-child(2),
+.kpi-card:nth-child(2) {
+    animation-delay:
+        0.10s;
+}
+
+
+.metric-card:nth-child(3),
+.kpi-card:nth-child(3) {
+    animation-delay:
+        0.15s;
+}
+
+
+.metric-card:nth-child(4),
+.kpi-card:nth-child(4) {
+    animation-delay:
+        0.20s;
+}
+
+
+/* =========================================================
+   MOTION SAFETY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero::before,
+    .hero::after,
+    .live-monitor::after,
+    .live-feed::after,
+    .monitor-panel::after,
+    .stApp::before {
+        animation:
+            none !important;
+    }
+
+}
+
+/* =========================================================
+   BULK SCANNER PIPELINE FLOW
+   ========================================================= */
+
+.bulk-pipeline-card {
+    position: relative;
+    transition:
+        transform 0.28s ease,
+        box-shadow 0.28s ease,
+        border-color 0.28s ease;
+}
+
+
+/* Card hover */
+
+.bulk-pipeline-card:hover {
+    transform:
+        translateY(-4px);
+
+    border-color:
+        rgba(57,231,255,0.28);
+
+    box-shadow:
+        0 14px 32px rgba(0,0,0,0.28),
+        0 0 24px rgba(57,231,255,0.07);
+}
+
+
+/* Subtle active glow */
+
+.bulk-pipeline-card {
+    animation:
+        pipelineCardIn
+        0.55s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
+}
+
+
+@keyframes pipelineCardIn {
+
+    0% {
+        opacity: 0;
+        transform:
+            translateY(8px);
+    }
+
+    100% {
+        opacity: 1;
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* Stagger the four stages */
+
+.bulk-pipeline-card:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.bulk-pipeline-card:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.bulk-pipeline-card:nth-child(3) {
+    animation-delay: 0.25s;
+}
+
+.bulk-pipeline-card:nth-child(4) {
+    animation-delay: 0.35s;
+}
 
 /* =========================================================
    REDUCED MOTION
@@ -3327,15 +4536,15 @@ elif page == "BULK SCANNER":
 
             html_block(
                 f"""
-                <div class="info-card"
+                <div class="info-card bulk-pipeline-card"
                      style="
-                     min-height:105px;
+                     min-height:135px;
                      ">
 
                     <div style="
                         color:#39E7FF;
                         font-family:Orbitron;
-                        font-size:9px;
+                        font-size:17px;
                         font-weight:800;
                         ">
 
@@ -3344,9 +4553,9 @@ elif page == "BULK SCANNER":
                     </div>
 
                     <div style="
-                        margin-top:9px;
+                        margin-top:12px;
                         color:#F4F6FF;
-                        font-size:10px;
+                        font-size:14px;
                         font-weight:900;
                         ">
 
@@ -3355,9 +4564,9 @@ elif page == "BULK SCANNER":
                     </div>
 
                     <div style="
-                        margin-top:5px;
-                        color:#68718E;
-                        font-size:8px;
+                        margin-top:7px;
+                        color:#9AA4C2;
+                        font-size:12px;
                         ">
 
                         {subtitle}
