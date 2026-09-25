@@ -702,12 +702,12 @@ st.markdown(
 
 
 .metric-label {
-    color: #707899;
+    color: #9AA4C2;
 
-    font-size: 8px;
+    font-size: 11px;
     font-weight: 900;
 
-    letter-spacing: 0.13em;
+    letter-spacing: 0.10em;
 }
 
 
@@ -724,11 +724,12 @@ st.markdown(
 
 
 .metric-hint {
-    color: #626A87;
+    color: #7F8BA8;
 
-    font-size: 8px;
+    font-size: 10px;
+    font-weight: 500;
 
-    margin-top: 6px;
+    margin-top: 7px;
 }
 
 
