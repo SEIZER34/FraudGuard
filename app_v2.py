@@ -724,12 +724,10 @@ st.markdown(
 
 
 .metric-hint {
-    color: #7F8BA8;
-
-    font-size: 10px;
+    color: #AEB7D5;
+    font-size: 11px;
     font-weight: 500;
-
-    margin-top: 7px;
+    margin-top: 8px;
 }
 
 
