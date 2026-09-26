@@ -12,7 +12,7 @@ The platform combines a Random Forest fraud detection model with interactive ana
 ## 🚀 Live Demo
 
 🌐 **FraudGuard:**  
-https://fraudguard-dmtcrkknc8amwsmpxlkr9.streamlit.app/
+(https://fraudguard-dmtcrkknc8amwsmpxlkrh9.streamlit.app/)
 
 ---
 
